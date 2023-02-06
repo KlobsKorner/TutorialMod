@@ -1,6 +1,11 @@
 package net.klob.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.klob.tutorialmod.block.ModBlocks;
+import net.klob.tutorialmod.item.ModCreativModeTabs;
+import net.klob.tutorialmod.item.Moditems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -25,6 +30,9 @@ public class TutorialMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        Moditems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -34,10 +42,23 @@ public class TutorialMod
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
+        if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(Moditems.BLACK_OPAL);
+            event.accept(Moditems.RAW_BLACK_OPAL);
+        }
+
+        if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BLACK_OPAL_BLOCK);
+        }
+
+        if(event.getTab() == ModCreativModeTabs.TUTORIAL_TAB) {
+            event.accept(Moditems.BLACK_OPAL);
+            event.accept(Moditems.RAW_BLACK_OPAL);
+            event.accept(ModBlocks.BLACK_OPAL_BLOCK);
+        }
 
     }
 
