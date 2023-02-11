@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    " I ",
+    " I "
+  ],
+  "key": {
+    "I": { "item": "tutorialmod:black_opal" },
+    "S": { "item": "minecraft:stick" }
+  },
+  "result": {
+    "item": "tutorialmod:lapo_crystal_sword",
+    "count": 1
+  }
+}

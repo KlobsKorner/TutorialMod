@@ -79,6 +79,9 @@ public class TutorialMod
             event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
             event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_ORE);
             event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
+            event.accept(Moditems.OPAL_CRYSTAL_SWORD);
+            event.accept(Moditems.LAPO_CRYSTAL_SWORD);
+            event.accept(Moditems.OPAL_CRYSTAL_HELMET);
         }
 
     }
