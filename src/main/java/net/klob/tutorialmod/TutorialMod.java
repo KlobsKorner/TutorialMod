@@ -6,6 +6,7 @@ import net.klob.tutorialmod.item.ModCreativModeTabs;
 import net.klob.tutorialmod.item.Moditems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -81,7 +82,11 @@ public class TutorialMod
             event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
             event.accept(Moditems.OPAL_CRYSTAL_SWORD);
             event.accept(Moditems.LAPO_CRYSTAL_SWORD);
+            event.accept(Moditems.OPAL_CRYSTAL_PICKAXE);
             event.accept(Moditems.OPAL_CRYSTAL_HELMET);
+            event.accept(Moditems.OPAL_CRYSTAL_CHEST);
+            event.accept(Moditems.OPAL_CRYSTAL_LEGGINGS);
+            event.accept(Moditems.OPAL_CRYSTAL_BOOTS);
         }
 
     }
